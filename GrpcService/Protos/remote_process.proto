@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+option csharp_namespace = "GrpcRemoteProcessInvoker";
+
+package remote_process;
+
+service RemoteProcessInvoker {
+  rpc ExecuteCommand (CommandRequest) returns (CommandResponse);
+}
+
+message CommandRequest {
+  string command = 1;
+  repeated string arguments = 2;
+}
+
+message CommandResponse {
+  bool success = 1;
+  string output = 2;
+  string error = 3;
+}

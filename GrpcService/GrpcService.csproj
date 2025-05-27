@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<Protobuf Include="Protos\remote_process.proto" GrpcServices="Server" />
+		<PackageReference Include="Grpc.AspNetCore" Version="2.47.0" />
+	</ItemGroup>
+
+</Project>
